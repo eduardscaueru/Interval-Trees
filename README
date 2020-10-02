@@ -1,0 +1,10 @@
+Implementare C Arbori de Intervale
+
+	Am realizat cerinta cu ajutorul a 2 functii suplimentare "creare" si "alocare_nod". Dupa ce am initializat arborele a trebuit sa apelez functia "creare" pentru a crea toate intervalele cuprinse intre cele 2 capete date ca parametru. Am construit arborele recursiv si am alocat memorie fiecarui nod la fiecare apel prin functia "alocare_nod". Cele 2 functii: actualizare si interogare le-am facut conform algoritmului dat.
+
+Intersecții de intervale
+
+	Pentru a rezolva cerinta cu arbori de intervale am considerat ca am nevoie de o noua structura in care sa salvez toate punctele date impreuna cu intervalul din care fac parte. Am ales sa fac acest lucru deoarece este mai simplu de a retine intervalul unui punct dupa ce le sortez de la stanga la dreapta. Odata sortate punctele le-am parcurs si am verificat daca
+	1) Punctul este capatul din stanga al unui interval orizontal caz in care am actualizat in arbore valoarea prin adaos.
+	2) Punctul este capatul din dreapta al unui interval orizontal caz in care am actualizat in arbore valoarea prin scadere.
+	3) Punctul este capatul din dreapta al unui interval vertical caz in care am interogat arborele si am actualizat solutia. Am ales de a trece peste capatul din stanga al unui interval vertical deoarece pot exista cazuri in care capatul fie stanga fie dreapta al unui segment orizontal sa fie aflat sau sa taie segmentul vertical.
